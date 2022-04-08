@@ -1,9 +1,7 @@
 const targetWords = [
   "these"
 ]
-const dictionary = [
-  "those"
-]
+
 // changes them because I wanna see the actual integration
 const WORD_LENGTH = 5
 const FLIP_ANIMATION_DURATION = 500
@@ -94,7 +92,7 @@ function submitGuess() {
     return word + tile.dataset.letter
   }, "")
 
-  if (!dictionary.includes(guess)) {
+  if (!targetwords.includes(guess)) {
     showAlert("Not in word list")
     shakeTiles(activeTiles)
     return
